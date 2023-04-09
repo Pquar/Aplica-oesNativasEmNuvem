@@ -1,4 +1,5 @@
 # Criar um Banco de dados no DynamoDB
+Objetivo criar um CRUD na AWS.
 
 - Abrir o  DynamoDB console at https://console.aws.amazon.com/dynamodb/
 - Clicar em Create table
@@ -13,7 +14,7 @@
 - Function name: http-crud-tutorial
 - Runtime: Node.js 14.x
 - Role: http-crud-tutorial-role (Simple microservice permissions)
-- Subistiuir oque está no arquivo index.js por:
+- Substituir oque está no arquivo index.js por:
 ```javascript
 /*
 Copyright 2021 Amazon.com, Inc. or its affiliates. All Rights Reserved.
@@ -113,21 +114,21 @@ DELETE /items/{id}
 >Deploy API e anexar integrações as rotas.
 
 # Resulta das consultas com métodos GET, POST, PUT e DELETE
-
 ### API Testada com o Postman
-#### GET /items
+#### GET /items 
 https://e0zxhb8xc9.execute-api.us-east-1.amazonaws.com/items
 ![Método Get items](get_items.jpg)
 #### GET /items/{id}
-https://e0zxhb8xc9.execute-api.us-east-1.amazonaws.com/items
+https://e0zxhb8xc9.execute-api.us-east-1.amazonaws.com/items/```valor%201```
 ![Método get id](get_id.jpg)
-https://e0zxhb8xc9.execute-api.us-east-1.amazonaws.com/items/valor%201
 #### DELETE /items/{id}
+https://e0zxhb8xc9.execute-api.us-east-1.amazonaws.com/items/```valor%201```
 ![Método delete](delete_id.jpg)
-https://e0zxhb8xc9.execute-api.us-east-1.amazonaws.com/items/valor%201
 #### PUT /items
-body:
+https://e0zxhb8xc9.execute-api.us-east-1.amazonaws.com/items/```valor%201```
+
 ```json
+body: 
 {
     "id": "abcdef234",
     "price": 12345,
